@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "concurrently \"vite --host 0.0.0.0 --port 3010\" \"cross-env PORT=3011 tsx watch src/server/index.ts\"",
     "db:migrate": "tsx scripts/migrate.ts",
+    "db:seed:pes": "tsx scripts/seed-pes.ts",
     "build": "vite build && tsc -p tsconfig.server.json",
     "start": "node dist-server/index.js",
     "start:local": "cross-env PORT=3010 node dist-server/index.js",

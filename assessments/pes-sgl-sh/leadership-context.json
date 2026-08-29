@@ -1,0 +1,119 @@
+{
+  "schemaVersion": "leadership-context/1.0",
+  "contextId": "pes-sgl-sh-role-context",
+  "version": "1.0.0",
+  "role": {
+    "title": "Sachgebietsleitung",
+    "purpose": "Ein Sachgebiet fachlich und organisatorisch führen, Personal wirksam einsetzen und entwickeln, Qualität und Aufgabenerfüllung sichern sowie die Amtsleitung unterstützen.",
+    "outcomes": [
+      "Prioritäten und Arbeitsfähigkeit des Sachgebiets auch bei konkurrierenden Anforderungen sichern.",
+      "Mitarbeitende klar führen, Zusammenarbeit fördern und Konflikte angemessen bearbeiten.",
+      "Entscheidungen nachvollziehbar treffen, delegieren oder eskalieren.",
+      "Veränderungen und Verbesserungen wirksam umsetzen."
+    ],
+    "accountabilities": [
+      "fachliche und organisatorische Leitung",
+      "Personalführung",
+      "Beurteilungsaufgaben",
+      "Kontroll- und Qualitätssicherungsaufgaben",
+      "Unterstützung der Amtsleitung"
+    ],
+    "decisionRights": [
+      "Priorisierung und Organisation der Arbeit im eigenen Verantwortungsbereich",
+      "Delegation im Rahmen der Führungsverantwortung",
+      "Entscheidung oder Eskalation abhängig von Zuständigkeit, Risiko und Tragweite"
+    ],
+    "interfaces": [
+      "Mitarbeitende des Sachgebiets",
+      "andere Sachgebietsleitungen",
+      "Amtsleitung",
+      "interne und externe Beteiligte abhängig von der Aufgabe"
+    ],
+    "context": [
+      "öffentliche Verwaltung / Steuerverwaltung Schleswig-Holstein",
+      "regelgebundene Aufgabenerfüllung mit Führungs-, Qualitäts- und Veränderungsverantwortung",
+      "teilweise zeitkritische und unvollständige Entscheidungslagen"
+    ]
+  },
+  "competencies": [
+    {
+      "id": "communication",
+      "label": "Kommunikationsgeschick",
+      "definition": "Informationen strukturiert aufnehmen, adressatengerecht vermitteln, Erwartungen klären und Rückkopplung sichern.",
+      "observableBehaviors": ["fasst relevante Informationen zusammen", "stellt klärende Fragen", "formuliert Erwartungen und Vereinbarungen eindeutig", "passt Kommunikation an Situation und Gegenüber an"],
+      "evidenceBasis": ["aktuelle öffentliche SGL-Ausschreibungen Schleswig-Holstein"],
+      "confidence": 0.9,
+      "status": "supported"
+    },
+    {
+      "id": "analysis-decision",
+      "label": "Analytisches Denkvermögen",
+      "definition": "Fakten, Unsicherheiten, Risiken und Handlungsoptionen strukturiert unterscheiden und daraus priorisierte Entscheidungen ableiten.",
+      "observableBehaviors": ["trennt Fakten von Annahmen", "priorisiert anhand von Risiko und Dringlichkeit", "benennt fehlende Informationen", "trifft oder vorbereitet Entscheidungen nachvollziehbar"],
+      "evidenceBasis": ["aktuelle öffentliche SGL-Ausschreibungen Schleswig-Holstein"],
+      "confidence": 0.9,
+      "status": "supported"
+    },
+    {
+      "id": "change-innovation",
+      "label": "Innovationsfähigkeit und Veränderungsbereitschaft",
+      "definition": "Verbesserungsbedarf erkennen, Veränderungen offen prüfen und deren Umsetzung strukturiert unterstützen.",
+      "observableBehaviors": ["identifiziert Verbesserungspotenzial", "prüft sachliche Einwände", "erklärt Ziel und Nutzen", "definiert Umsetzung und Erfolgskontrolle"],
+      "evidenceBasis": ["aktuelle öffentliche SGL-Ausschreibungen Schleswig-Holstein"],
+      "confidence": 0.88,
+      "status": "supported"
+    },
+    {
+      "id": "leadership-collaboration",
+      "label": "Zusammenarbeit fördern",
+      "definition": "Zusammenarbeit durch klare Verantwortlichkeiten, angemessene Beteiligung und konstruktive Konfliktbearbeitung organisieren.",
+      "observableBehaviors": ["klärt Rollen und Verantwortlichkeiten", "bezieht Betroffene situativ ein", "bearbeitet Konflikte sach- und aufgabenbezogen", "hält Führungsentscheidungen nicht unnötig zurück"],
+      "evidenceBasis": ["aktuelle öffentliche SGL-Ausschreibungen Schleswig-Holstein", "öffentlicher SGL-Rollenkontext mit Personalführung"],
+      "confidence": 0.9,
+      "status": "supported"
+    },
+    {
+      "id": "responsibility",
+      "label": "Verantwortungsbereitschaft",
+      "definition": "Verantwortung für Entscheidungen und Folgen übernehmen sowie Delegation und Eskalation bewusst einsetzen.",
+      "observableBehaviors": ["macht eigene Entscheidung kenntlich", "begründet Delegation", "benennt Risiken", "definiert Follow-up oder Eskalationsschwelle"],
+      "evidenceBasis": ["aktuelle öffentliche SGL-Ausschreibungen Schleswig-Holstein"],
+      "confidence": 0.9,
+      "status": "supported"
+    },
+    {
+      "id": "self-management",
+      "label": "Selbstmanagement",
+      "definition": "Unter konkurrierenden Anforderungen strukturiert priorisieren, das eigene Zeitbudget steuern und handlungsfähig bleiben.",
+      "observableBehaviors": ["setzt Prioritäten", "nutzt Delegierbarkeit", "strukturiert verfügbare Zeit", "vermeidet sowohl vorschnelle als auch vermeidbar verzögerte Entscheidungen"],
+      "evidenceBasis": ["aktuelle öffentliche SGL-Ausschreibungen Schleswig-Holstein"],
+      "confidence": 0.85,
+      "status": "supported"
+    },
+    {
+      "id": "reflection",
+      "label": "Reflexionsfähigkeit",
+      "definition": "Eigenes Führungsverhalten und dessen mögliche Wirkung prüfen und daraus konkrete Verhaltensanpassungen ableiten.",
+      "observableBehaviors": ["benennt eigenes Ziel und tatsächliches Verhalten", "prüft mögliche Wirkung", "formuliert konkrete Alternative", "leitet eine Verhaltensregel für nächste Situationen ab"],
+      "evidenceBasis": ["Coaching-Zielsetzung; keine Behauptung einer offiziellen SGL-Anforderung"],
+      "confidence": 0.75,
+      "status": "provisional"
+    }
+  ],
+  "assessmentRisks": [
+    "Öffentliche SGL-Anforderungen sind nicht automatisch identisch mit einer internen PES-Beobachtermatrix.",
+    "Sozial erwünschte Führungsformulierungen können beobachtbares Verhalten vortäuschen; Übungen müssen deshalb Entscheidungen und konkrete Handlungen erzwingen.",
+    "Bearbeitungszeit darf nur kontextuell interpretiert werden und nicht automatisch als Leistungswert gelten."
+  ],
+  "unknowns": [
+    "Vertrauliche interne Beobachterkriterien und deren Gewichtung sind nicht bekannt.",
+    "Exakte aktuelle Übungsformate des konkreten PES-Verfahrens sind aus den öffentlichen Quellen nicht vollständig ableitbar."
+  ],
+  "provenance": {
+    "bootstrapInputHash": "pending-canonical-hash",
+    "creationMode": "mixed",
+    "promptContract": "leadership-bootstrap/1.0.0",
+    "modelReported": null,
+    "createdAt": "2026-08-29T15:20:00Z"
+  }
+}

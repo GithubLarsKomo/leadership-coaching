@@ -1,0 +1,27 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm install --no-audit --no-fund
+      - run: npm run check
+      - run: docker build -t leadership-coaching:ci .
+      - name: Smoke Docker health
+        run: |
+          docker run -d --name leadership-coaching-ci -p 3000:3000 leadership-coaching:ci
+          for i in $(seq 1 20); do
+            if curl --fail --silent http://127.0.0.1:3000/healthz; then exit 0; fi
+            sleep 1
+          done
+          docker logs leadership-coaching-ci
+          exit 1

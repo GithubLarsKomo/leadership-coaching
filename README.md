@@ -1,12 +1,12 @@
-# Leadership Assessment Coaching
+# Leadership Coaching
 
-Adaptive, timed leadership assessment and coaching application with versioned round definitions, immutable handoffs, server-authoritative timing and LLM-agnostic prompt contracts.
+Generic adaptive leadership assessment and coaching platform with versioned definitions, immutable handoffs, server-authoritative timing and LLM-agnostic manual prompt contracts.
 
-> Repository bootstrap note: the current GitHub repository name contains the typo `leaderdhip`. Rename the repository to `leadership-assessment-coaching` before production deployment.
+PES/SGL Schleswig-Holstein is the first assessment pack; it is not hard-coded application logic.
 
 ## Status
 
-Initial architecture and vertical MVP bootstrap.
+Initial architecture plus first usable PES/SGL vertical slice on `feat/initial-mvp`.
 
 ## Product principles
 
@@ -14,8 +14,19 @@ Initial architecture and vertical MVP bootstrap.
 - Candidate-facing tasks remain locked until server-authoritative unlock.
 - Timing is measured from database timestamps, never browser clocks.
 - Raw answers, timing and handoffs are immutable evidence; assessments are derived, separately versioned interpretations.
-- LLM use is optional and provider-agnostic through versioned prompt contracts and structured JSON schemas.
+- LLM interaction is manual copy/paste for the MVP. No built-in provider API calls are required.
+- Bootstrap, assessment and next-round generation use provider-neutral JSON and prompt contracts.
 - PES/SGL Schleswig-Holstein is the first assessment pack, not hard-coded application logic.
+
+## Local test
+
+The local browser entry point is:
+
+```text
+http://localhost:3010
+```
+
+See `docs/local-testing.md` for PostgreSQL startup, migrations, PES/SGL seed and the timed candidate flow.
 
 ## Target deployment
 
@@ -23,6 +34,6 @@ Initial architecture and vertical MVP bootstrap.
 - React + Vite + TypeScript
 - PostgreSQL
 - Docker / Coolify
-- internal port `3000`
+- internal production port configurable through `PORT` (default `3000`)
 - health endpoint `GET /healthz`
 - production deployment from `main`

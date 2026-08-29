@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://leadership-assessment.ratzeburg-ai.de/schemas/round-handoff-v1.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "kind", "session", "round", "timing", "questions", "scorecardRef"],
+  "properties": {
+    "schemaVersion": {"const": "1.0"},
+    "kind": {"const": "leadership-round-handoff"},
+    "session": {"type": "object"},
+    "round": {"type": "object"},
+    "timing": {"type": "object", "required": ["unlockedAt", "completedAt", "elapsedMs"], "properties": {"unlockedAt": {"type": "string", "format": "date-time"}, "completedAt": {"type": "string", "format": "date-time"}, "elapsedMs": {"type": "integer", "minimum": 0}, "timeLimitMs": {"type": ["integer", "null"]}}},
+    "questions": {"type": "array", "items": {"type": "object"}},
+    "priorAssessmentRefs": {"type": "array"},
+    "scorecardRef": {"type": "object"}
+  }
+}

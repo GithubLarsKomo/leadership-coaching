@@ -1,0 +1,19 @@
+services:
+  postgres:
+    image: postgres:18-alpine
+    environment:
+      POSTGRES_DB: leadership_coaching
+      POSTGRES_USER: leadership_coaching_app
+      POSTGRES_PASSWORD: leadership_coaching_local
+    ports:
+      - "5437:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U leadership_coaching_app -d leadership_coaching"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+    volumes:
+      - leadership_coaching_pgdata:/var/lib/postgresql/data
+
+volumes:
+  leadership_coaching_pgdata:

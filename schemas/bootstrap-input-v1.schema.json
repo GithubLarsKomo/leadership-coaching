@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://leadership-coaching.ratzeburg-ai.de/schemas/bootstrap-input-v1.schema.json",
+  "title": "Leadership Coaching Bootstrap Input v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "assessmentId", "title", "locale", "objective", "targetRole", "evidence", "constraints", "sessionIntent"],
+  "properties": {
+    "schemaVersion": {"const": "leadership-coaching-bootstrap/1.0"},
+    "assessmentId": {"type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$"},
+    "title": {"type": "string", "minLength": 1},
+    "locale": {"type": "string", "minLength": 2},
+    "objective": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "description", "desiredOutcome"],
+      "properties": {
+        "type": {"enum": ["development", "baseline", "simulation", "readiness", "mixed"]},
+        "description": {"type": "string", "minLength": 1},
+        "desiredOutcome": {"type": "string", "minLength": 1}
+      }
+    },
+    "targetRole": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["title", "organizationContext"],
+      "properties": {
+        "title": {"type": "string", "minLength": 1},
+        "organizationContext": {"type": "string", "minLength": 1},
+        "roleArchitecture": {"type": ["object", "null"]}
+      }
+    },
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["maturity", "roleDocuments", "competencyModels", "knownRequirements", "sourceNotes"],
+      "properties": {
+        "maturity": {"enum": ["authoritative", "evidence-based", "exploratory"]},
+        "roleDocuments": {"type": "array", "items": {"type": "object"}},
+        "competencyModels": {"type": "array", "items": {"type": "object"}},
+        "knownRequirements": {"type": "array", "items": {"type": "object"}},
+        "sourceNotes": {"type": "array", "items": {"type": "object"}}
+      }
+    },
+    "participantContext": {"type": "object"},
+    "constraints": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["timed", "candidateMaySeeScorecard", "specialistKnowledgeRequired"],
+      "properties": {
+        "maxRoundDurationMinutes": {"type": "integer", "minimum": 1, "maximum": 180},
+        "timed": {"type": "boolean"},
+        "candidateMaySeeScorecard": {"type": "boolean"},
+        "specialistKnowledgeRequired": {"type": "boolean"},
+        "additional": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "sessionIntent": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["mode", "adaptive", "feedbackPolicy"],
+      "properties": {
+        "mode": {"enum": ["baseline", "training", "simulation", "final-assessment"]},
+        "adaptive": {"type": "boolean"},
+        "feedbackPolicy": {"enum": ["none", "after-task", "after-round", "after-block", "after-session"]}
+      }
+    }
+  }
+}

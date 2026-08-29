@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://leadership-coaching.ratzeburg-ai.de/schemas/initial-assessment-package-v1.schema.json",
+  "title": "Initial Leadership Assessment Package v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "leadershipContextRef", "scorecard", "assessmentDefinition", "provenance"],
+  "properties": {
+    "schemaVersion": {"const": "leadership-initial-assessment-package/1.0"},
+    "leadershipContextRef": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "version"],
+      "properties": {
+        "id": {"type": "string"},
+        "version": {"type": "string"}
+      }
+    },
+    "scorecard": {"$ref": "scorecard-v1.schema.json"},
+    "assessmentDefinition": {"$ref": "assessment-definition-v1.schema.json"},
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["creationMode", "promptContract"],
+      "properties": {
+        "creationMode": {"enum": ["manual-llm", "manual-human", "mixed"]},
+        "promptContract": {"const": "initial-assessment-design/1.0.0"},
+        "modelReported": {"type": ["string", "null"]},
+        "leadershipContextHash": {"type": "string"},
+        "outputHash": {"type": "string"}
+      }
+    }
+  }
+}

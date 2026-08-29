@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://leadership-assessment.ratzeburg-ai.de/schemas/round-assessment-v1.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "kind", "dimensionAssessments", "developmentTargets", "recommendedNextProbe"],
+  "properties": {
+    "schemaVersion": {"const": "1.0"},
+    "kind": {"const": "leadership-round-assessment"},
+    "dimensionAssessments": {"type": "array", "items": {"type": "object", "required": ["dimensionId", "evidenceClass", "confidence", "observations", "gaps"], "properties": {"dimensionId": {"type": "string"}, "evidenceClass": {"enum": ["verified", "supported-inference", "unknown", "contradicted"]}, "score": {"type": ["number", "null"], "minimum": 1, "maximum": 5}, "confidence": {"type": "number", "minimum": 0, "maximum": 1}, "observations": {"type": "array", "items": {"type": "string"}}, "gaps": {"type": "array", "items": {"type": "string"}}}}},
+    "timingInterpretation": {"type": "object"},
+    "developmentTargets": {"type": "array"},
+    "recommendedNextProbe": {"type": "object"}
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "1.0",
+  "scorecardId": "sgl-sh-coaching",
+  "version": "1.0.0",
+  "dimensions": [
+    {"id":"communication","label":"Kommunikation","weight":0.20,"definition":"Strukturiert, adressatengerecht und klar kommunizieren sowie relevante Informationen aktiv aufnehmen.","observableEvidence":["klare Gesprächsstruktur","aktives Zuhören","konkrete Erwartung oder Vereinbarung"]},
+    {"id":"leadership-collaboration","label":"Führung & Zusammenarbeit","weight":0.20,"definition":"Verantwortung und Zusammenarbeit wirksam organisieren und Konflikte führungsangemessen bearbeiten.","observableEvidence":["Verantwortlichkeiten klären","Beteiligung angemessen organisieren","Konflikte nicht vorschnell personalisieren"]},
+    {"id":"analysis-decision","label":"Analyse & Entscheidung","weight":0.15,"definition":"Fakten, Annahmen, Risiken und Handlungsbedarf trennen und nachvollziehbar entscheiden.","observableEvidence":["Fakten und Unsicherheiten trennen","Prioritäten begründen","Entscheidung trotz begrenzter Information treffen"]},
+    {"id":"responsibility","label":"Verantwortung","weight":0.15,"definition":"Entscheidungsverantwortung übernehmen, Risiken benennen und angemessen delegieren oder eskalieren.","observableEvidence":["eigene Entscheidung kenntlich machen","Eskalationsschwelle begründen","Follow-up festlegen"]},
+    {"id":"change-innovation","label":"Veränderung & Innovation","weight":0.10,"definition":"Verbesserungen erkennen und Veränderung unter Einbezug sachlicher Widerstände umsetzen.","observableEvidence":["Ziel und Nutzen klären","Widerstände differenzieren","Umsetzungsschritte definieren"]},
+    {"id":"self-management","label":"Selbstmanagement","weight":0.10,"definition":"Unter Zeit- und Aufgabendruck strukturiert priorisieren und arbeitsfähig bleiben.","observableEvidence":["Dringlichkeit und Risiko unterscheiden","Delegierbarkeit nutzen","Zeitbudget sichtbar steuern"]},
+    {"id":"reflection","label":"Reflexion","weight":0.10,"definition":"Eigenes Verhalten anhand seiner Wirkung prüfen und konkrete Lernschritte ableiten.","observableEvidence":["eigenen Anteil benennen","Alternative formulieren","konkrete Verhaltensregel ableiten"]}
+  ]
+}

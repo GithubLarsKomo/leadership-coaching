@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "definitionId": "pes-sgl-sh",
+  "version": "1.0.0",
+  "title": "PES / SGL Coaching Schleswig-Holstein",
+  "description": "Erster Assessment-Pack für die Entwicklung beobachtbaren Führungsverhaltens im Umfeld einer SGL-Qualifizierung.",
+  "goal": {
+    "description": "Führungsverhalten in realistischen, zeitlich begrenzten Situationen beobachten, entwickeln und auf Transfer prüfen.",
+    "desiredOutcome": "Reproduzierbar angemessenes Führungsverhalten auch unter Zeitdruck und unvollständiger Information."
+  },
+  "scorecardRef": {"id": "sgl-sh-coaching", "version": "1.0.0"},
+  "settings": {"defaultMode": "baseline", "feedbackPolicy": "after-session", "serverAuthoritativeTiming": true},
+  "rounds": [
+    {
+      "id": "baseline-prioritization-r1",
+      "title": "Priorisierung unter Führungsdruck",
+      "purpose": "Baseline für Analyse, Verantwortung und Selbstmanagement.",
+      "delivery": {"revealOnUnlock": true, "allowPause": false, "timeLimitSeconds": 600, "showCountdown": true},
+      "competencies": ["analysis-decision", "responsibility", "self-management"],
+      "difficulty": {"ambiguity": 3, "timePressure": 3, "stakeholderComplexity": 3},
+      "questions": [
+        {
+          "id": "baseline-r1-q1",
+          "type": "textarea",
+          "prompt": "Sie übernehmen morgens die Sachgebietsleitung. Gleichzeitig fällt eine erfahrene Mitarbeiterin kurzfristig aus, eine fristgebundene Sache muss heute entschieden werden, ein neuer Mitarbeiter benötigt fachliche Unterstützung, die Amtsleitung bittet um eine Rückmeldung bis Mittag und aus dem Team wird ein mögliches Qualitätsproblem gemeldet. Beschreiben Sie, wie Sie die ersten 60 Minuten strukturieren: Was tun Sie selbst, was delegieren Sie, was klären Sie zuerst und warum?",
+          "required": true
+        }
+      ]
+    }
+  ]
+}

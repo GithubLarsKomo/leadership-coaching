@@ -8,8 +8,26 @@
     "description": "Führungsverhalten in realistischen, zeitlich begrenzten Situationen beobachten, entwickeln und auf Transfer prüfen.",
     "desiredOutcome": "Reproduzierbar angemessenes Führungsverhalten auch unter Zeitdruck und unvollständiger Information."
   },
+  "leadershipContextRef": {"id": "pes-sgl-sh-role-context", "version": "1.0.0"},
   "scorecardRef": {"id": "sgl-sh-coaching", "version": "1.0.0"},
-  "settings": {"defaultMode": "baseline", "feedbackPolicy": "after-session", "serverAuthoritativeTiming": true},
+  "sessionPolicy": {
+    "adaptive": true,
+    "timed": true,
+    "feedbackPolicy": "after-session",
+    "allowRetries": true
+  },
+  "roundStrategy": {
+    "generationMode": "progressive-manual",
+    "maxPrimaryCompetenciesPerRound": 3
+  },
+  "generationPolicy": {
+    "assessmentPrompt": "assess-round/1.0.0",
+    "nextRoundPrompt": "generate-next-round/1.0.0"
+  },
+  "settings": {
+    "defaultMode": "baseline",
+    "serverAuthoritativeTiming": true
+  },
   "rounds": [
     {
       "id": "baseline-prioritization-r1",

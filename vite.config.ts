@@ -6,10 +6,11 @@ export default defineConfig({
   root: '.',
   build: { outDir: 'dist' },
   server: {
-    port: 5173,
+    port: 3010,
+    strictPort: true,
     proxy: {
-      '/api': 'http://127.0.0.1:3000',
-      '/healthz': 'http://127.0.0.1:3000'
+      '/api': 'http://127.0.0.1:3011',
+      '/healthz': 'http://127.0.0.1:3011'
     }
   }
 });

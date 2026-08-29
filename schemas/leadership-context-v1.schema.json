@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://leadership-coaching.ratzeburg-ai.de/schemas/leadership-context-v1.schema.json",
+  "title": "Leadership Context v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "contextId", "version", "role", "competencies", "assessmentRisks", "unknowns", "provenance"],
+  "properties": {
+    "schemaVersion": {"const": "leadership-context/1.0"},
+    "contextId": {"type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$"},
+    "version": {"type": "string", "minLength": 1},
+    "role": {
+      "type": "object",
+      "required": ["title", "purpose", "outcomes", "accountabilities", "decisionRights", "interfaces", "context"],
+      "properties": {
+        "title": {"type": "string"},
+        "purpose": {"type": "string"},
+        "outcomes": {"type": "array", "items": {"type": "string"}},
+        "accountabilities": {"type": "array", "items": {"type": "string"}},
+        "decisionRights": {"type": "array", "items": {"type": "string"}},
+        "interfaces": {"type": "array", "items": {"type": "string"}},
+        "context": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "competencies": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "label", "definition", "observableBehaviors", "evidenceBasis", "confidence", "status"],
+        "properties": {
+          "id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$"},
+          "label": {"type": "string"},
+          "definition": {"type": "string"},
+          "observableBehaviors": {"type": "array", "items": {"type": "string"}},
+          "evidenceBasis": {"type": "array", "items": {"type": "string"}},
+          "confidence": {"type": "number", "minimum": 0, "maximum": 1},
+          "status": {"enum": ["confirmed", "supported", "provisional", "unknown"]}
+        }
+      }
+    },
+    "assessmentRisks": {"type": "array", "items": {"type": "string"}},
+    "unknowns": {"type": "array", "items": {"type": "string"}},
+    "provenance": {
+      "type": "object",
+      "required": ["bootstrapInputHash", "creationMode"],
+      "properties": {
+        "bootstrapInputHash": {"type": "string"},
+        "creationMode": {"enum": ["manual-llm", "manual-human", "mixed"]},
+        "promptContract": {"type": "string"},
+        "modelReported": {"type": ["string", "null"]},
+        "createdAt": {"type": "string", "format": "date-time"}
+      }
+    }
+  }
+}

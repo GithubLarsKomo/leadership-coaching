@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "leadership-coaching-bootstrap/1.0",
+  "assessmentId": "pes-sgl-sh",
+  "title": "PES / SGL Coaching Schleswig-Holstein",
+  "locale": "de-DE",
+  "objective": {
+    "type": "development",
+    "description": "Vorbereitung auf beobachtbares Führungsverhalten im Kontext der Qualifizierung und Entwicklung für Sachgebietsleitungen in der schleswig-holsteinischen Landes- beziehungsweise Steuerverwaltung.",
+    "desiredOutcome": "Situationsangemessenes, nachvollziehbares Führungsverhalten unter Zeitdruck, Unsicherheit, Konflikt und Veränderung zeigen und reflektieren können."
+  },
+  "targetRole": {
+    "title": "Sachgebietsleitung",
+    "organizationContext": "Öffentliche Verwaltung / Steuerverwaltung Schleswig-Holstein",
+    "roleArchitecture": null
+  },
+  "evidence": {
+    "maturity": "evidence-based",
+    "roleDocuments": [],
+    "competencyModels": [],
+    "knownRequirements": [
+      {"id": "analysis", "statement": "Analytisches Denkvermögen wird in aktuellen öffentlichen SGL-Ausschreibungen als Anforderung genannt.", "authority": "official-public-source"},
+      {"id": "communication", "statement": "Kommunikationsgeschick wird in aktuellen öffentlichen SGL-Ausschreibungen als Anforderung genannt.", "authority": "official-public-source"},
+      {"id": "innovation", "statement": "Innovationsfähigkeit wird in aktuellen öffentlichen SGL-Ausschreibungen als Anforderung genannt.", "authority": "official-public-source"},
+      {"id": "change", "statement": "Aufgeschlossenheit gegenüber Veränderungen wird in aktuellen öffentlichen SGL-Ausschreibungen als Anforderung genannt.", "authority": "official-public-source"},
+      {"id": "collaboration", "statement": "Die Fähigkeit, Zusammenarbeit zu fördern, wird in aktuellen öffentlichen SGL-Ausschreibungen als Anforderung genannt.", "authority": "official-public-source"},
+      {"id": "responsibility", "statement": "Verantwortungsbereitschaft wird in aktuellen öffentlichen SGL-Ausschreibungen als Anforderung genannt.", "authority": "official-public-source"},
+      {"id": "self-management", "statement": "Selbstmanagement wird in aktuellen öffentlichen SGL-Ausschreibungen als Anforderung genannt.", "authority": "official-public-source"}
+    ],
+    "sourceNotes": [
+      {"id": "pes", "statement": "PES wird im schleswig-holsteinischen Verwaltungskontext als Personalentwicklungsseminar verwendet."},
+      {"id": "role-scope", "statement": "Öffentliche SGL-Ausschreibungen beschreiben fachliche und organisatorische Leitung, Personalführung, Beurteilungs- und Kontrollaufgaben sowie Unterstützung der Amtsleitung."},
+      {"id": "caveat", "statement": "Die öffentlich sichtbaren Anforderungen dürfen nicht als identisch mit einer vertraulichen internen PES-Beobachtermatrix dargestellt werden."}
+    ]
+  },
+  "participantContext": {
+    "available": false
+  },
+  "constraints": {
+    "maxRoundDurationMinutes": 15,
+    "timed": true,
+    "candidateMaySeeScorecard": false,
+    "specialistKnowledgeRequired": false,
+    "additional": [
+      "Keine erwartete Musterantwort offenlegen.",
+      "Primär beobachtbares Führungsverhalten statt Fachwissen testen.",
+      "Zeitmessung serverautoritativ ab Freischaltung bis Abschluss."
+    ]
+  },
+  "sessionIntent": {
+    "mode": "baseline",
+    "adaptive": true,
+    "feedbackPolicy": "after-session"
+  }
+}
